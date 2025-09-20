@@ -15,7 +15,7 @@ Presented at *Computers & Geosciences*
 
 ## Abstract
 
-> The quantification and identification of components in archaeological micromorphology remain subjective and challenging, particularly for early-career researchers. To address this, we developed a deep learning-based tool for the automatic segmentation of three key materials frequently found in Paleolithic thin sections: bone, charcoal, and flint/obsidian. Leveraging high-resolution photomicrographs and convolutional neural network architectures, including U-Net, FPN, and PSPNet, combined with various pre-trained encoders, we trained and evaluated models capable of precise material segmentation. The U-Net architecture with the InceptionV4 encoder achieved the best performance, particularly for flint/obsidian, with a dataset-level IoU of 0.96. The models also performed well in classifying the relative abundance of each material, achieving high balanced accuracy across categories despite dataset imbalance. Our results demonstrate the potential of deep learning to improve objectivity, accuracy, and reproducibility in archaeological micromorphology, providing a valuable tool for future geoarchaeological research.
+> The quantification and identification of components in archaeological micromorphology remain subjective and challenging, particularly for early-career researchers. To address this, we developed a deep learning tool for the automatic segmentation of three materials commonly found in Palaeolithic thin sections: bone, charcoal, and flint (including obsidian). Using high-resolution photomicrographs of 57 thin sections in plane-polarised and cross-polarised light, we trained and evaluated state-of-the-art convolutional neural networks (CNNs) for material segmentation. The best-performing configuration, a U-Net with an InceptionV4 encoder, achieved mean intersection over union (IoU) scores of 0.96 for flint (including obsidian), 0.80 for bone, and 0.82 for charcoal. The models also classified the relative abundance of each material with balanced accuracies of 0.99 for flint (including obsidian), 0.92 for bone, and 0.85 for charcoal. These results demonstrate the potential of deep learning to enhance objectivity, accuracy, and reproducibility in archaeological micromorphology, providing a valuable resource for future geoarchaeological research.
 
 ## Manual
 
@@ -35,3 +35,8 @@ Before running the code, the following global variables should be adjusted:
 - `BATCH_SIZE` (*int*): Training batch size.
 - `TRAIN_SIZE` (*float*): Percentage of samples to be used for traning (as a fraction of 1.0).
 - `VAL_SIZE` (*float*): Percentage of samples to be used for validation (as a fraction of 1.0).
+
+## Dataset
+- [Bone](https://drive.google.com/file/d/1evExk5R5TEgWtITx8Yf1usjC_a_9p3VU/view?usp=drive_link)
+- [Charcoal](https://drive.google.com/file/d/1yzW_xC4rvc-ZXg6N4Y2BXV_BXtarSmOJ/view?usp=drive_link)
+- [Flint](https://drive.google.com/file/d/1DOxd26lkbXOFSXDH1KeOPKKzH9K0vrYX/view?usp=drive_link)
